@@ -6,6 +6,12 @@ body {
     color: #f5f5f5;
     font-family: 'Cinzel', serif;
     text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Navigation Bar */
@@ -25,11 +31,12 @@ body {
     font-size: 18px;
     padding: 14px 20px;
     margin: 0 10px;
-    transition: 0.3s;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navibar a:hover {
     color: #f4c430;
+    transform: translateY(-3px);
 }
 
 /* Centered Content */
@@ -39,6 +46,7 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .pfp {
@@ -47,11 +55,24 @@ body {
     border-radius: 50%;
     margin-bottom: 20px;
     border: 3px solid #f4c430;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pfp:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(244, 196, 48, 0.8);
 }
 
 h1 {
     font-size: 32px;
     color: #f4c430;
+    text-shadow: 0 0 10px rgba(244, 196, 48, 0.7);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(244, 196, 48, 0.7); }
+    to { text-shadow: 0 0 20px rgba(244, 196, 48, 0.9); }
 }
 
 .paragraph {
@@ -67,6 +88,12 @@ h1 {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adventure:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(244, 196, 48, 0.7);
 }
 
 .adventure h2 {
@@ -84,7 +111,10 @@ h1 {
     object-fit: cover;
     border-radius: 10px;
     margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-html{
-    scroll-behavior: smooth;
+
+.adventure-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(244, 196, 48, 0.8);
 }
